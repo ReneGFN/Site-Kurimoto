@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Site Kurimoto</title>
+</head>
+<body>
+    <div class="particulas"></div>
+
+    <nav class ="navegacao">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Início</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="imagens/fotoperfil.jpg" alt="Foto de Perfil" class="foto-perfil">
+            <h1>Fernando Kurimoto</h1>
+            <p class="cabecalho-sub-titulo">Este é o meu site pessoal onde compartilho meus projetos e informações sobre mim.</p>
+        </div>
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Meu nome é Fernando Kurimoto. Sou um entusiasta de tecnologia e desenvolvimento web. Neste site, você encontrará informações sobre meus projetos, habilidades e como entrar em contato comigo.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img class="projetos-imagem" src="imagens/projeto1.png" alt="Imagem do Projeto 1">
+             <div class="caixa-textos-projeto">
+                <h3 class="info-projetos">Projeto 1</h3>
+                <p class="paragrafo-projetos">Descrição breve do Projeto 1.</p>
+             </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projetos-imagem" src="imagens/projeto2.png" alt="Imagem do Projeto 2">
+             <div class="caixa-textos-projeto">
+                <h3 class="info-projetos">Projeto 2</h3>
+                <p class="paragrafo-projetos">Descrição breve do Projeto 2.</p>
+             </div>
+            </div>
+
+            <div class="projetos-card">
+                <img class="projetos-imagem" src="imagens/projeto3.png" alt="Imagem do Projeto 3">
+             <div class="caixa-textos-projeto">
+                <h3 class="info-projetos">Projeto 3</h3>
+                <p class="paragrafo-projetos">Descrição breve do Projeto 3.</p>
+             </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatos" class="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <div class="contatos-caixa">
+            <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+                <div class="grupo-form">
+                    <input placeholder="Nome" class="campo-form" id="nome"> 
+                </div>
+
+                <div class="grupo-form">
+                    <textarea class="campo-form" placeholder="Digite sua mensagem" id="mensagem" rows="6"></textarea>
+                </div>
+                <button type="submit" class="botao-form">Enviar WhatsApp</button>
+            </form>
+       </div>
+    </section>
+    
+    <div id="modal" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2 id="modal-titulo"></h2>
+            <div class="modal-galeria">
+                <div class="galeria-fotos" id="galeria-fotos"></div>
+            </div>
+            <div id="foto-detalhes" class="foto-detalhes">
+                <div class="info-foto">
+                    <h3 id="descricao-foto"></h3>
+                    <div class="descricao-completa">
+                        <p id="descricao-completa-text" class="descricao-text"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="redes-sociais">
+            <a href="https://www.instagram.com/visaoem.foco" target="_blank" class="social-link instagram" title="Instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/fernando-kurimoto-b873a3336" target="_blank" class="social-link linkedin" title="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+        </div>
+        <p class="footer-text">&copy; 2025 Fernando Kurimoto. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
